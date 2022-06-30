@@ -1,0 +1,9 @@
+class Solution:
+     def minValue(self, a, b, n):
+       a.sort()
+       b.sort()
+       b = b[::-1]
+       result = 0
+       for i in range(n):
+           result = result + (a[i]*b[i])
+       return result
