@@ -1,0 +1,11 @@
+def findSwapValues(self,a, n, b, m):
+       # Your code goes here
+       sum1, sum2 = sum(a), sum(b)
+       count = 0
+       for i in set(a):
+           for j in set(b):
+               new_sum1 = sum1 - i + j
+               new_sum2 = sum2 - j + i
+               if new_sum1 == new_sum2:
+                   return 1
+       return -1
